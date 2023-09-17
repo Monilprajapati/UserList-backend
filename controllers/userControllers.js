@@ -42,11 +42,11 @@ export const editUser = async (request, response) => {
   }
 };
 
-// export const deleteUser = async (request, response) => {
-//   try {
-//     await User.deleteOne({ _id: request.params.id });
-//     response.status(201).json("User deleted Successfully");
-//   } catch (error) {
-//     response.status(409).json({ message: error.message });
-//   }
-// };
+export const deleteUser = async (request, response) => {
+  try {
+    await User.deleteOne({ _id: request.params.id });
+    response.status(201).json("User deleted Successfully");
+  } catch (error) {
+    response.status(409).json({ message: error.message });
+  }
+};
